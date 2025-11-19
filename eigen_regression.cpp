@@ -109,7 +109,7 @@ int main() {
 
     auto end = chrono::high_resolution_clock::now();
     chrono::duration<double> duration = end - start;
-    cout << "Time taken by code: " << duration.count() << " seconds" << endl;
+    cout << "Time taken by Eigen code: " << duration.count() << " seconds" << endl;
 
     return 0;
 }

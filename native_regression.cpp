@@ -204,12 +204,12 @@ int main() {
   for(int i=0;i<iterations;i++) {
     // compute gradient descent
     compute_gradient(W, b, X_norm, y, alpha);
-    for(int j=0;j<m;j++) {
-      cout << "w_" << (j+1) << ": " << W[j] << (j < m-1 ? " | " : "");
-    }
-    cout << "\nb: " << b << "\n";
+    // for(int j=0;j<m;j++) {
+    //   cout << "w_" << (j+1) << ": " << W[j] << (j < m-1 ? " | " : "");
+    // }
+    // cout << "\nb: " << b << "\n";
 
-    cout << "Cost: " << compute_cost(W, b, X_norm, y);
+    // cout << "Cost: " << compute_cost(W, b, X_norm, y);
   }
 
   cout << "\n\nFinal parameters\n";
@@ -243,7 +243,7 @@ int main() {
   auto end = chrono::high_resolution_clock::now(); // end timer 
   chrono::duration<double> duration = end - start;
 
-  cout << "Time taken by code: " << duration.count() << "seconds\n";
+  cout << "Time taken by Native code: " << duration.count() << "seconds\n";
 
   return 0;
 }
